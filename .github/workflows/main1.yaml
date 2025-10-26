@@ -7,6 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Issue Comment Body
-        env:
-          COMMENT_BODY: ${{ github.event.issue.body }}
-        run: echo "The comment body is: $COMMENT_BODY"
+        run: echo "The issue body is: ${{ github.event.issue.body }}"
