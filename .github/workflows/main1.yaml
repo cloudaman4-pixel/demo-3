@@ -1,0 +1,12 @@
+name: issues
+on:
+  issues:
+    types: [opened, edited, milestoned]
+jobs:
+  print-issue-body:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Issue Comment Body
+        env:
+          COMMENT_BODY: ${{ github.event.issue.body }}
+        run: echo "The comment body is: $COMMENT_BODY"
