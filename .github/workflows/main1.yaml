@@ -1,10 +1,12 @@
 name: issues
+
 on:
   issues:
     types: [opened, edited, milestoned]
+
 jobs:
   print-issue-body:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Issue Comment Body
+      - name: Print Issue Body
         run: echo "The issue body is: ${{ github.event.issue.body }}"
