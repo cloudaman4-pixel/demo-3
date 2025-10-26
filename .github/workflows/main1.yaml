@@ -2,8 +2,6 @@ name: issues
 
 on:
   issues:
-    types: [opened, edited, milestoned]
-
 jobs:
   print-issue-body:
     runs-on: ubuntu-latest
