@@ -9,4 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Issue Body
-        run: echo "The issue body is: ${{ github.event.issue.body }}"
+        run: |
+          echo "The issue body is:"
+          echo "${{ github.event.issue.body }}"
