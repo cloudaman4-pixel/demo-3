@@ -1,7 +1,8 @@
 name: issues
 
 on:
-  issues:
+  workflow_run:
+    
 jobs:
   print-issue-body:
     runs-on: ubuntu-latest
