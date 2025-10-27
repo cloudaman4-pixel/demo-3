@@ -2,9 +2,10 @@ name: issues
 
 on:
   issues:
+
 jobs:
-  print-issue-body:
+  print-trigger:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Issue Body
-        run: echo ${{ github.event.comment.body }}
+      - name: Print activation message
+        run: echo "🚀 Workflow triggered! An issue event has occurred."
