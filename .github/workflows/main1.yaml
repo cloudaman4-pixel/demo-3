@@ -7,3 +7,5 @@ jobs:
     steps:
       - name: Print activation message
         run: echo "🚀 Workflow triggered! An issue event has occurred."
+      - name: Fail using false
+        run: false
