@@ -1,0 +1,17 @@
+name: issues
+
+on:
+  issues:
+    types: [opened]   # יופעל רק כשנפתח issue חדש
+
+jobs:
+  print-issue-body:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Issue Body
+        run: |
+          echo "The issue title is:"
+          echo "${{ github.event.issue.title }}"
+          echo ""
+          echo "The issue body is:"
+          echo "${{ github.event.issue.body }}"
